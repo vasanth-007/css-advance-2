@@ -1,0 +1,36 @@
+.bo{
+    background-color: coral;
+    border: none;
+    height: 100px;
+    width: 30%;
+    display: block;
+    color: aliceblue;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.bo:hover{
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+
+}
+.bo span{
+    font-size: 25px;
+    transition: all .5s;
+    position: relative;
+}
+.bo:hover span{
+    padding-right: 30px;
+}
+.bo span::after{
+    content: "\00bb";
+    font-size: 40px;
+    position: absolute;
+    visibility: hidden;
+    top: -10px;
+    right: -30px;
+    transition: .5s;
+}
+.bo:hover span::after {
+    opacity: ;
+    visibility: visible;
+    padding-right: 30px;
+}
