@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+}
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 15px;
+}
+.block1{
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 15px;
+    margin-top: 10px;
+}
+@media(max-width:700px) {
+    .block1{
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+@media(max-width:400px) {
+    .block1{
+        flex: 100%;
+        max-width: 100%;
+    }
+    
+}
