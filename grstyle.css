@@ -8,7 +8,7 @@ body{
 .grid-container{
     display: grid;
     background-color: blue;
-    grid-template-columns: auto auto auto;
+    grid-template-columns:auto auto auto auto ;
     padding: 20px;
 }
 .grid-container > div{
@@ -18,8 +18,12 @@ body{
     font-size: 30px;
     text-align: center;
 }
-.grid-item1{
-    grid-column-start: 1;
-    grid-column-end: 3;
-
+@media screen and (max-width:500px) {
+    .grid-item1{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+    
 }
