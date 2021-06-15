@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
+    grid-template-areas:'logo nav btn'
+                        'logo nav btn' ;
+    height: 8fr;
+    background-color:grey;
+}
+/*block1*/
+.logo{
+    grid-area: logo;
+    height: 14fr;
+    margin-right: 800px;
+}
+.logo img{
+    width: 40px;
+    transform: translateY(25%);
+}
+/*block2*/
+.nav{
+    grid-area: nav;
+    background-color: red;
+    height: 8fr;
+    margin-top: 12px;
+}
+.nav a{
+    text-decoration: none;
+    color: black;
+    padding-left: 20px;
+}
+/*block3*/
+.btn{
+    flex-shrink: 0;
+    margin-top: 12px;
+    grid-area: btn;
+}
+button{
+    margin-left: 20px;
+    border: none;
+    border-radius: 2px;
+    background-color: rgb(183, 238, 74);
+}
+.image-section{
+    width: 100%;
+    height: 100px;
+    background-color: blue;
+    grid-area: image;
+}
+@media screen and (max-width:500px){
+    .grid-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 1fr 1fr;
+        grid-template-areas:'logo'
+                            'btn'
+                            'nav' ;
+    }
+    .nav{
+        display: none;
+    }
+}
